@@ -15,7 +15,7 @@ header {
     background-color: rgb(51, 51, 56);
     height: 900px;
     color: white;
-    padding-top: 280px;
+    padding-top: 360px;
 }
 
 .section-2 {
@@ -23,6 +23,8 @@ header {
     height: 700px;
     color: white;
     padding-top: 1px;
+    height: 1500px;
+    font-size: 22.5px;
 }
 
 .section-3 {
@@ -148,6 +150,7 @@ div > a {
     font-size: 1.5rem;
     font-weight: 10;
 }
+
     .social-icons {
     display: flex;
     justify-content: center;
@@ -156,15 +159,56 @@ div > a {
     margin-top: 4rem;
     flex-wrap: wrap;
 }
-
+/*
 @media only screens and (min-width: 2400) {
-  header > nav > a {
-    
-  }
   .social-icons {
     text-align: center;
   }
   footer {
     text-align: center;
   }
+} */
+
+.projects {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, min-content);
+    gap: 2rem;
+    place-items: center;
+}
+
+.project {
+    background-color: white;
+    width: 350px;
+    height: 187px;
+    margin-bottom: 10px;
+    display: block;
+    grid-column: 1 / -1;
+  }
+
+.project-name {
+    background-color: rgb(51, 51, 56);
+    height: 30px;
+}
+
+.show-hover{
+    color: orange;
+    font-size: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.project:hover{
+    cursor: pointer;
+}
+
+iframe{
+    cursor: pointer;
+    width: 350px;
+}
+
+.project:hover > div >  .show-hover {
+    opacity: 1;
+    visibility: visible;
 }
